@@ -5,12 +5,21 @@ angular.module('LunchCheck', [])
 	.controller('LunchCheckController', LunchCheckController);
 
 	LunchCheckController.$inject = ['$scope'];
-	function LunchCheckController($scope, $filter) {
-	  $scope.name = "Yaakov";
 
-	  $scope.upper = function () {
-	    var upCase = $filter('uppercase');
-	    $scope.name = upCase($scope.name);
-	  };
+	function LunchCheckController($scope) {
+		$scope.checkIfTooMuch = function() {
+			var strings = [];
+			$scope.message = '';
+			
+			if ( $scope.inputString !== "" ) {
+				strings = $scope.inputString.split(',');
+
+				if (strings.length >= 1 && strings.length <= 3) {
+					$scope.message = "Enjoy!";
+				} else if (strings.length > 3) {
+				    $scope.message = "Too much!";
+				}
+			}	
+		}
 	}
 })();
