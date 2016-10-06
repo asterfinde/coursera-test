@@ -37,7 +37,7 @@ function AlreadyBoughtController(ShoppingListCheckOffService) {
 function ShoppingListCheckOffService() {
   var service = this;
 
-  // Initial list of shopping items
+  // initial list of items to buy
   var buyItems = [
                     { name: "Pizza-Cheese", quantity: 2  },
                     { name: "Milk",         quantity: 4  },
@@ -46,14 +46,20 @@ function ShoppingListCheckOffService() {
                     { name: "Pepto Bismol", quantity: 1  }
                 ];
 
+  // list to bought Items
   var boughtItems = [];
-              
+  
+  // call from 'ng-click' in every button of list to buy
   service.buyItem = function (itemIndex) {
     var item = {};
-    console.log(itemIndex);
+
+    // only if exits items to buy
     if (buyItems.length > 0) {
+      // read the item (name, qty) to local variable according to index argument
       item = buyItems[itemIndex];
+      // remove item from buyItems list
       buyItems.splice(itemIndex, 1);
+      // insert item into boughtItems list
       boughtItems.push(item);
     }
   };
