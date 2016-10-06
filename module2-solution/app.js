@@ -42,7 +42,7 @@ function ShoppingListCheckOffService() {
                     { name: "Pizza-Cheese", quantity: 2  },
                     { name: "Milk",         quantity: 4  },
                     { name: "Cookies",      quantity: 10 },
-                    { name: "Juice orange", quantity: 5  },
+                    { name: "Juice orange", quantity: 6  },
                     { name: "Pepto Bismol", quantity: 1  }
                 ];
 
