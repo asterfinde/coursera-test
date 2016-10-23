@@ -1,0 +1,19 @@
+<div class="container">
+  <ol class="breadcrumb">
+    <li><a ui-sref="home">Home</a></li>
+    <li><a ui-sref="categories">Categories</a></li>
+    <li class="active">{{menuItems.categoryName}}</li>
+  </ol>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Our {{menuItems.categoryName}} Menu Items</div>
+  <div class="panel-body">
+    <menu-items items="menuItems.categoryItems"></menu-items>
+</div>
+
+
+
+
+<!--<ui-view></ui-view>-->

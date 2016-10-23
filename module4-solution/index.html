@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Welcome To Our Restaurant</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Welcome To Our Restaurant ;)</h1>
+      </div>
+
+      <ui-view></ui-view>
+      <div class="row">
+        <loading-spinner></loading-spinner>
+      </div>
+
+      <!-- Libraries -->
+      <script src="lib/angular.min.js"></script>
+      <script src="lib/angular-ui-router.min.js"></script>
+
+      <!-- Modules -->
+      <script src="src/menuapp/menuapp.module.js"></script>
+      <script src="src/menuapp/data.module.js"></script>
+      <script src="src/spinner/spinner.module.js"></script>
+
+      <!-- Routes -->
+      <script src="src/routes.js"></script>
+
+      <!-- 'MenuApp' module artifacts -->
+      <script src="src/menuapp/categories.component.js"></script>
+      <script src="src/menuapp/categories.controller.js"></script>
+      <script src="src/menuapp/items.component.js"></script>
+      <script src="src/menuapp/items.controller.js"></script>
+      <script src="src/menuapp/menudata.service.js"></script>
+
+      <!-- 'Spinner' module artifacts -->
+      <script src="src/spinner/loadingspinner.component.js"></script>
+  </div>
+  </body>
+</html>
