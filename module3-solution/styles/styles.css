@@ -5,9 +5,16 @@ input[type="text"] {
   width: 200px;
   float: left;
 }
+form {
+  margin-bottom: 36px;
+}
 .narrow-button {
   float: left;
   margin-left: 10px;
+}
+.error {
+  font-weight: bold;
+  color: red;
 }
 .loader {
   display: none;

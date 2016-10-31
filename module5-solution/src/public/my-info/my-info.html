@@ -1,0 +1,37 @@
+<div class="container text-center" ng-if="myInfoCtrl.userLoggedIn">
+
+<h1>Welcome, {{myInfoCtrl.user.firstname }}!</h1>
+<p>Here are your personal details:</p>
+
+<ul class="list-group col-md-12">
+  <li class="list-group-item" color="black"><strong>First name:</strong> {{myInfoCtrl.user.firstname }}</li>
+  <li class="list-group-item" color="black"><strong>Last name:</strong> {{myInfoCtrl.user.lastname }}</li>
+  <li class="list-group-item" color="black"><strong>Email:</strong> {{myInfoCtrl.user.email}}</li>
+  <li class="list-group-item" color="black"><strong>Phone #:</strong> {{myInfoCtrl.user.phone}}</li>
+</ul>  
+
+<br>
+    
+  <div class="menu-item-tile col-md-12" ng-if="myInfoCtrl.user.favorite">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="menu-item-photo">
+        <img class="img-responsive" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.user.favorite.short_name}}.jpg" alt="Favorite dish image">
+      </div>
+    </div>
+    <div class="menu-item-description col-md-7">
+      <h2 class="menu-item-title">Your Favorite Dish:</h2>
+	  <h3 class="menu-item-title">{{myInfoCtrl.user.favorite.name}}</h3>
+      <p class="menu-item-details">{{myInfoCtrl.user.favorite.description}}</p>
+    </div>
+  </div>
+</div>  
+
+<br>
+    
+</div>
+
+
+<div ng-if="!myInfoCtrl.userLoggedIn" class="container text-center">
+    <h2> Not Signed Up Yet. <a ui-sref="public.signup">Sign up now!</a> </h2>
+</div>
